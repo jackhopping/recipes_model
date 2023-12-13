@@ -13,11 +13,11 @@ My model will be a classification model which predicts recipe ratings based on t
 
 ## Baseline Model
 
-<iframe src="assets/n-steps-hist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/n-steps-hist.html" width=600 height=600 frameBorder=0></iframe>
 
-<iframe src="assets/minutes-hist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/minutes-hist.html" width=600 height=600 frameBorder=0></iframe>
 
-<iframe src="assets/ratings-hist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/ratings-hist.html" width=600 height=600 frameBorder=0></iframe>
 
 ## Final Model
 
