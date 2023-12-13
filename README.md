@@ -19,6 +19,12 @@ My model will be a classification model which predicts recipe ratings based on t
 
 <iframe src="assets/ratings-hist.html" width=600 height=600 frameBorder=0></iframe>
 
+** Baseline Metrics: **
+- Train Precision: ```0.7364680023644379```
+- Test Precision: ```0.6478012759804213```
+- Train F1: ```0.6840155662030893```
+- Test F1: ```0.6774356466520753```
+
 ## Final Model
 
 ## Fairness Analysis
