@@ -19,6 +19,8 @@ My model will be a classification model which predicts recipe ratings based on t
 
 <iframe src="assets/ratings-hist.html" width=600 height=600 frameBorder=0></iframe>
 
+My baseline model consists of two predictior features, ```n_steps``` and ```minutes```. I did not need to perform any categorical transformations, since both features are quantitative. The performance metrics of the model are shown below:
+
 ** Baseline Metrics: **
 - Train Precision: ```0.7364680023644379```
 - Test Precision: ```0.6478012759804213```
