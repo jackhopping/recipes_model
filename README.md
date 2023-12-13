@@ -29,4 +29,10 @@ My baseline model consists of two predictior features, ```n_steps``` and ```minu
 
 ## Final Model
 
+** Final Model Metrics: **
+- Train Precision: ```0.8153649411449584```
+- Test Precision: ```0.8160505433151705```
+- Train F1: ```0.8030270019924108```
+- Test F1: ```0.8024801563510491```
+
 ## Fairness Analysis
