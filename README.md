@@ -3,13 +3,17 @@
 
 ## Framing the Problem
 
-My model will be a classification model which predicts recipe ratings based on the features "minutes" and "n_steps".
+My model will be a multiclass classification model which predicts recipe ratings based on the features "minutes" and "n_steps".
 
 ### Feature Types
 
 - Ratings: Categorical Ordinal
 - Minutes: Quantitative Discrete
 - N_steps: Quantitaticve Discrete
+
+The response variable in my model is ```rating```. I chose this to be the response variable because it is arguably what people consider the most when deciding between options. In the specific example of a recipes dataset, a person is much more likely to choose a recipe that has 4 or 5 stars than one that has 1 star. Ratings influence our choices in so many ways, so I wanted to see what influences ```rating``` and how well I can predict ratings based on other features.
+
+I am using precision as my evaluation metric because it measures how well a model avoids false positives - in this scenario, predicted high ratings when the actual rating is low.
 
 ## Baseline Model
 
@@ -18,14 +22,12 @@ My baseline model consists of two predictor features, ```n_steps``` and ```minut
 **Baseline Metrics:**
 - Train Precision: ```0.7364680023644379```
 - Test Precision: ```0.6478012759804213```
-- Train F1: ```0.6840155662030893```
-- Test F1: ```0.6774356466520753```
 
 ## Final Model
 
 In the final model I had a total of four features: ```n_steps``` and ```minutes``` from my baseline model, as well as ```n_ingredients``` and ```avg recipe rating```. The reason I decided to add each of these additional features is that I believe simpler recipes, with less ingredients, would have higher ratings overall because they are cheaper and easier for the average person to cook than a recipe with many ingredients, and the average recipe rating can indicate what an individual rating is likely to be.
 
-The feature engineering that I performer was a log transformation on the "N-steps" and "minutes" columns. Both were heavily skewed right, as shown in the histograms below.
+The feature engineering that I performer was a log transformation on the "N-steps" and "minutes" columns. Both were heavily skewed right, as shown in the histograms below. A log transformation normalized the distributions, which will help my model's performance.
 
 <iframe src="assets/n-steps-hist.html" width=600 height=600 frameBorder=0></iframe>
 
@@ -46,9 +48,7 @@ The performance metrics of my final model are shown below:
 **Final Model Metrics:**
 - Train Precision: ```0.8505029379254765```
 - Test Precision: ```0.7717957876681332```
-- Train F1: ```0.8524856452573817```
-- Test F1: ```0.7783913021187199```
 
-Overall, my final model performed better than my baseline model.
+Overall, my final model performed better than my baseline model. This performance is an improvement because the final model achieved a higher precision and a higher F1 score.
 
 ## Fairness Analysis
