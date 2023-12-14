@@ -17,7 +17,7 @@ I am using precision as my evaluation metric because it measures how well a mode
 
 ## Baseline Model
 
-My baseline model consists of two predictor features, ```n_steps``` and ```minutes```. I did not need to perform any categorical transformations, since both features are quantitative. The performance metrics of the model are shown below:
+My baseline model consists of two predictor features, ```n_steps``` and ```minutes```. I did not need to perform any categorical transformations, since both features are quantitative, and the only other transformation I performed was applying a StandardScaler since ```minutes``` and ```n_steps``` are not the same units. The performance metrics of the model are shown below:
 
 **Baseline Metrics:**
 - Train Precision: ```0.7364680023644379```
