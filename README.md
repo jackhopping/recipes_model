@@ -19,7 +19,8 @@ My model will be a classification model which predicts recipe ratings based on t
 
 <iframe src="assets/ratings-hist.html" width=600 height=600 frameBorder=0></iframe>
 
-My baseline model consists of two predictior features, ```n_steps``` and ```minutes```. I did not need to perform any categorical transformations, since both features are quantitative. The performance metrics of the model are shown below:
+My baseline model consists of two predict
+or features, ```n_steps``` and ```minutes```. I did not need to perform any categorical transformations, since both features are quantitative. The performance metrics of the model are shown below:
 
 **Baseline Metrics:**
 - Train Precision: ```0.7364680023644379```
@@ -35,11 +36,16 @@ I chose to use DecisionTreeClassifier for my model. I was debating between Decis
 
 After running a GridSearchCV, I found that the optimal hyperparameters were as follows:
 
+- ```criterion```: ```entropy```
+- ```max_depth```: ```7```
+- ```min_samples_split```: ```200```
+
+The performance metrics of my final model are shown below:
 
 **Final Model Metrics:**
-- Train Precision: ```0.8153649411449584```
-- Test Precision: ```0.8160505433151705```
-- Train F1: ```0.8030270019924108```
-- Test F1: ```0.8024801563510491```
+- Train Precision: ```0.8234570631036819```
+- Test Precision: ```0.8247005766288731```
+- Train F1: ```0.8105638959858958```
+- Test F1: ```0.8109791440670799```
 
 ## Fairness Analysis
